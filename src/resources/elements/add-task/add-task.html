@@ -1,0 +1,5 @@
+<template>
+  <require from="./add-task.scss"></require>
+  <input value.bind="taskName" class="input input__todo-task outline--off" placeholder="enter a task name"></input>
+  <button class="button button--todo-task outline--off" click.delegate="addNewTask()">add</button>
+</template>

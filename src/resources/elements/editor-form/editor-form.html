@@ -1,0 +1,18 @@
+<template>
+  <require from="./editor-form.scss"></require>
+  <ai-dialog>
+    <ai-header>
+      <h3>Edit task name</h3>
+    </ai-header>
+    <ai-dialog-body>
+      <div class="ai-model__input">
+        <input type="text" value.bind="model.name">
+      </div>
+    </ai-dialog-body>
+
+    <ai-dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="ok(model.name)">Ok</button>
+    </ai-dialog-footer>
+  </ai-dialog>
+</template>

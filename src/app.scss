@@ -1,0 +1,49 @@
+@import 'variables';
+
+.button {
+    border: 0;
+    height: 34px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.input {
+    padding-left: 10px;
+    letter-spacing: 1px;
+}
+
+.outline--off {
+    outline: 0;
+}
+
+.au-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .au-selection__title {
+        font-size: 2em;
+    }
+
+    .au-selection__content {
+        display: flex;
+        flex-direction: column;
+
+        .content__list-task {            
+            height: 550px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color:#dbd3d3;
+            margin-top: 15px;
+            border: $border-black-opacity03;
+            border-radius: 3px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+    }
+
+}

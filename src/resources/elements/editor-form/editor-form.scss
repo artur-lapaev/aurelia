@@ -1,0 +1,43 @@
+ux-dialog-overlay.active {
+    background-color: black;
+    opacity: .5;
+  }
+
+  ux-dialog-container > div, ux-dialog-container > div > div,
+  ai-dialog {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  ux-dialog-container > div > div {
+    justify-content: center;
+    align-items: center;
+  }
+
+  ai-dialog {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(248, 252, 250);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  ai-header,
+  ai-dialog-body,
+  ai-dialog-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  ai-dialog-footer {
+    button {
+        margin-right: 15px;
+    }
+  }

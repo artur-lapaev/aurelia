@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Odibee";
+    src: url("/fonts/Odibee_Sans/OdibeeSans-Regular.ttf") format("truetype");
+    }
+
+html, body {
+    font-family: Odibee;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ffeee5;
+    color: #2c2c2c;
+}
+
