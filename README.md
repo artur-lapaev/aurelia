@@ -1,4 +1,4 @@
-# `todo-gursk`
+# `todo-gursk by Arthur Lapaev`
 
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
@@ -6,7 +6,8 @@ For more information, go to https://aurelia.io/docs/cli/webpack
 
 ## Run dev app
 
-Run `npm start`, then open `http://localhost:8080`
+Run `npm start`, then open `http://localhost:1337`
+or you can use aurelia-cli with au run command
 
 You can change the standard webpack configurations from CLI easily with something like this: `npm start -- --open --port 8888`. However, it is better to change the respective npm scripts or `webpack.config.js` with these options, as per your need.
 
