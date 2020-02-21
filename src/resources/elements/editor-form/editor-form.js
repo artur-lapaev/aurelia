@@ -14,10 +14,10 @@ export class EditorForm {
     this.model = model;
   }
 
-  ok(name) {
-    this.model.name = name;
-    this.controller.close();
+  ok(desc) {
+    this.model.task.description = desc;
+    this.controller.close(true);
     this.dataService.updateTaskByID(this.model);
-    this.eventAggregator.publish('newTask', this.dataService.getData());
+    this.eventAggregator.publish('newTask', this.dataService.getListTask());
   }
 }

@@ -12,14 +12,14 @@ export class ListTask {
     this.dialogService = dialogService;
     this.eventAggregator = eventAggregator;
     this.router = router;
-    this._parseData(this.dataService.getData());
+    this._parseData(this.dataService.getListTask());
   }
 
   created() {
     this.eventAggregator.subscribe(RouterEvent.Complete, event => {
       const routeName = event.instruction.config.name;
       if (routeName === 'edit') {
-        const dataModel = { id: +event.instruction.params.id, name: this.dataService.getTaskByID(+event.instruction.params.id) };
+        const dataModel = { id: +event.instruction.params.id, task: this.dataService.getTaskByID(+event.instruction.params.id) };
         this.dialogService.open({ viewModel: EditorForm, model: dataModel, action: this.action }).whenClosed(response => {
           this.router.navigateToRoute('home');
         });
@@ -30,11 +30,12 @@ export class ListTask {
       this._parseData(newTask);
     });
   }
+
   _parseData(serviceData) {
     return this.dataTask = serviceData ? JSON.parse(serviceData) : [];
   }
 
   removeTask(task) {
-    this.dataTask = this.dataService.updateData(task);
+    this.dataTask = this.dataService.updateListTask(task);
   }
 }

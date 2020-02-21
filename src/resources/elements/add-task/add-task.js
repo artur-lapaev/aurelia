@@ -11,9 +11,8 @@ export class AddTask {
   }
 
   addNewTask() {
-    const value = this.taskName;
-    this.dataService.setData(value);
+    this.dataService.createNewTask(this.taskName);
     this.taskName = '';
-    this.eventAggregator.publish('newTask', this.dataService.getData());
+    this.eventAggregator.publish('newTask', this.dataService.getListTask());
   }
 }

@@ -18,10 +18,10 @@
       "server": "dev",
       "extractCss": "prod",
       "coverage": false
+    },
+    "copyFiles": {
+      "node_modules/font-awesome/fonts/*": "font-awesome/fonts"
     }
-  },
-  "copyFiles": {
-    "node_modules/@fortawesome/fontawesome-free/webfonts/*": "@fortawesome/fontawesome-free/webfonts"
   },
   "platform": {
     "hmr": false,

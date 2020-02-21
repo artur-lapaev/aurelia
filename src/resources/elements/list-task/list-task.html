@@ -1,8 +1,8 @@
 <template>
   <require from="./list-task.scss"></require>
   <div class="list-task__task" repeat.for="task of dataTask">
-    <span class="task__name">${task}</span>
-    <button class="button button--edit-task outline--off"><a route-href="route: edit; params.bind: {id: $index}" class="fas fa-edit"></a></button>
-    <button class="button button--remove-task outline--off" click.trigger="removeTask(task)"><a class="fas fa-trash"></a></button>
+    <span class="task__name">${task.name}</span>
+    <button class="button button--edit-task outline--off"><a route-href="route: edit; params.bind: {id: $index}" class="fa fa-edit"></a></button>
+    <button class="button button--remove-task outline--off" click.trigger="removeTask(task)"><a class="fa fa-trash"></a></button>
   </div>
 </template>
